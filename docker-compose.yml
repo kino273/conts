@@ -7,7 +7,7 @@ dev:
   dns_search:
     - localdomain
   ports:
-    - "3222"
+    - "22"
   volumes:
     - /usr/local/docker:/usr/local/docker-host
 
