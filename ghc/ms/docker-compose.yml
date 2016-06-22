@@ -1,5 +1,5 @@
 dev:
-  image: kino/conts:fed-ghc-ms
+  image: kino/conts:deb-ghc-ms
   hostname: dev.localdomain
   privileged: true
   dns:
@@ -12,7 +12,7 @@ dev:
     - /usr/local/docker:/usr/local/docker-host
 
 devcopy:
-  image: kino/conts:fed-ghc-ms
+  image: kino/conts:deb-ghc-ms
   hostname: devcopy.localdomain
   volumes:
     - /usr/local/docker:/usr/local/docker-host
