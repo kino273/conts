@@ -1,5 +1,5 @@
 devcopy:
-  image: kino/conts:fed-cmus
+  image: kino/conts:fed22-cmus
   hostname: devcopy.localdomain
   volumes:
     - /usr/local/docker:/usr/local/docker-host

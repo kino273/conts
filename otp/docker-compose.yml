@@ -1,5 +1,5 @@
 devcopy:
-  image: kino/conts:fed-otp
+  image: kino/conts:fed22-otp
   hostname: devcopy.localdomain
   volumes:
     - /usr/local/docker:/usr/local/docker-host

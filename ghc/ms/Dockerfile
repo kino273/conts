@@ -1,4 +1,4 @@
-FROM kino/conts:fed-ghc
+FROM kino/conts:fed22-ghc
 
 RUN su worker -c "cabal update; cabal install music-suite"
 RUN dnf install -y lilypond

@@ -1,4 +1,4 @@
-FROM kino/conts:fed
+FROM kino/conts:fed22
 
 RUN (apt-get install -y cabal-install ghc)
 
