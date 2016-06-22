@@ -1,4 +1,4 @@
-FROM kino/conts:fed
+FROM kino/conts:fed24
 
 ADD cmus-2.7.1.tar.gz /tmp/
 
