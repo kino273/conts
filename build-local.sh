@@ -13,5 +13,6 @@ dnf install -y \
     emacs wget gcc ncurses-devel \
     git dnf-plugins-core gpg \
     ImageMagick ffmpeg \
-    ipa-gothic-fonts ipa-mincho-fonts ipa-pgothic-fonts ipa-pmincho-fonts ipa-ex-gothic-fonts ipa-ex-mincho-fonts
+    ipa-gothic-fonts ipa-mincho-fonts ipa-pgothic-fonts ipa-pmincho-fonts ipa-ex-gothic-fonts ipa-ex-mincho-fonts \
+    python-pip python3-pip
 
