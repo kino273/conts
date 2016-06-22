@@ -17,7 +17,6 @@ ADD copy.sh startservice.sh /usr/local/
 
 # --- worker --------------------
 RUN (useradd -s /bin/bash worker; \
-     usermod -s /bin/bash root; \
      echo 'worker:newpass' | chpasswd; \
      echo 'root:newpass' | chpasswd; \
      mkdir -p /home/worker)
