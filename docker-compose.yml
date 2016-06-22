@@ -1,6 +1,6 @@
 dev:
   image: kino/conts:fedora
-  hostname: dev
+  hostname: dev.localdomain
   privileged: true
   dns:
     - 8.8.8.8
@@ -8,3 +8,5 @@ dev:
     - localdomain
   ports:
     - "3222"
+  volumes:
+    - /usr/local/docker:/usr/local/docker-host
