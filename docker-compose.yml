@@ -1,5 +1,5 @@
 dev:
-  image: kino/conts:fedora
+  image: kino/conts:deb
   hostname: dev.localdomain
   privileged: true
   dns:
@@ -7,6 +7,13 @@ dev:
   dns_search:
     - localdomain
   ports:
-    - "3222"
+    - "22"
   volumes:
     - /usr/local/docker:/usr/local/docker-host
+
+devcopy:
+  image: kino/conts:deb
+  hostname: devcopy.localdomain
+  volumes:
+    - /usr/local/docker:/usr/local/docker-host
+  command: /usr/local/copy.sh
