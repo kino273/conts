@@ -17,3 +17,8 @@ devcopy:
   volumes:
     - /usr/local/docker:/usr/local/docker-host
   command: /usr/local/copy.sh
+
+cmus:
+  extends:
+    service: devcopy
+  image: kino/conts:fed-cmus
