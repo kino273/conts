@@ -1,0 +1,6 @@
+devcopy:
+  image: kino/conts:fed-otp
+  hostname: devcopy.localdomain
+  volumes:
+    - /usr/local/docker:/usr/local/docker-host
+  command: /usr/local/copy.sh
