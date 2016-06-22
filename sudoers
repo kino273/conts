@@ -1,0 +1,2 @@
+## Allow worker to run all commands without a password
+worker        ALL=(ALL)       NOPASSWD: ALL

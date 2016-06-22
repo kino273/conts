@@ -1,0 +1,10 @@
+dev:
+  image: kino/conts:fedora
+  hostname: dev
+  privileged: true
+  dns:
+    - 8.8.8.8
+  dns_search:
+    - localdomain
+  ports:
+    - "3222"

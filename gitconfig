@@ -1,0 +1,12 @@
+[user]
+        email = worker@localhost
+        name = worker
+[color]
+	ui = auto
+[core]
+	excludesfile = ~/.gitignore
+[alias]
+	hist = log --pretty=format:'%h [33m%d[0m %s' --graph --date=short
+        hi = log --pretty=format:'%h %d %s' --graph --date=short
+[push]
+	default = simple
