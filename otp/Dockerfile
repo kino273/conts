@@ -1,4 +1,4 @@
-FROM kino/conts:fed
+FROM kino/conts:deb
 ENV VVV=/usr/local/docker
 ENV VER=17.4
 

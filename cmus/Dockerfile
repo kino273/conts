@@ -1,4 +1,4 @@
-FROM kino/conts:fedora
+FROM kino/conts:deb
 
 ADD cmus-2.7.1.tar.gz /tmp/
 
