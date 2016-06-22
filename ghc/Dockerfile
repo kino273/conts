@@ -1,4 +1,4 @@
-FROM kino/conts:fed22
+FROM kino/conts:fed23
 
 RUN (dnf install -y ghc cabal-install emacs-haskell-mode)
 
