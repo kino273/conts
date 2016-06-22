@@ -1,5 +1,5 @@
 dev:
-  image: kino/conts:fedora
+  image: kino/conts:fed
   hostname: dev.localdomain
   privileged: true
   dns:
