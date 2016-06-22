@@ -1,6 +1,6 @@
 FROM kino/conts:deb
 
-RUN (dnf install -y ghc cabal-install emacs-haskell-mode)
+RUN (apt-get install -y cabal-install ghc)
 
 
 EXPOSE 22
