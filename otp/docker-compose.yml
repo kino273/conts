@@ -1,6 +1,0 @@
-devcopy:
-  image: kino/conts:deb-otp
-  hostname: devcopy.localdomain
-  volumes:
-    - /usr/local/docker:/usr/local/docker-host
-  command: /usr/local/copy.sh
