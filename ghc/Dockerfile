@@ -1,6 +1,6 @@
-FROM kino/conts:fed
+FROM kino/conts:fed24
 
-RUN (apt-get install -y cabal-install ghc)
+RUN (dnf install -y ghc cabal-install emacs-haskell-mode)
 
 
 EXPOSE 22
