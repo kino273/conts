@@ -21,19 +21,19 @@ devcopy:
 cmus:
   extends:
     service: devcopy
-  image: kino/conts:fed-cmus
+  image: kino/conts:fed22-cmus
   
 otp:
   extends:
     service: devcopy
-  image: kino/conts:fed-otp
+  image: kino/conts:fed22-otp
 
 ghc:
   extends:
     service: dev
-  image: kino/conts:fed-ghc
+  image: kino/conts:fed22-ghc
 
 ghc-ms:
   extends:
     service: ghc
-  image: kino/conts:fed-ghc-ms
+  image: kino/conts:fed22-ghc-ms
