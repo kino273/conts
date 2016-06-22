@@ -1,4 +1,4 @@
-FROM fedora
+FROM fedora:24
 
 # --- build local OS specific ---
 ADD ./build-local.sh /tmp/build-local.sh

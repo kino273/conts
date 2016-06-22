@@ -1,5 +1,5 @@
 dev:
-  image: kino/conts:fed
+  image: kino/conts:fed24
   hostname: dev.localdomain
   privileged: true
   dns:
@@ -12,7 +12,7 @@ dev:
     - /usr/local/docker:/usr/local/docker-host
 
 devcopy:
-  image: kino/conts:fed
+  image: kino/conts:fed24
   hostname: devcopy.localdomain
   volumes:
     - /usr/local/docker:/usr/local/docker-host
@@ -21,19 +21,19 @@ devcopy:
 cmus:
   extends:
     service: devcopy
-  image: kino/conts:fed-cmus
+  image: kino/conts:fed24-cmus
   
 otp:
   extends:
     service: devcopy
-  image: kino/conts:fed-otp
+  image: kino/conts:fed24-otp
 
 ghc:
   extends:
     service: dev
-  image: kino/conts:fed-ghc
+  image: kino/conts:fed24-ghc
 
 ghc-ms:
   extends:
     service: ghc
-  image: kino/conts:fed-ghc-ms
+  image: kino/conts:fed24-ghc-ms
