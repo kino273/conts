@@ -1,4 +1,4 @@
-FROM kino/fedora
+FROM kino/conts:fed
 ENV VVV=/usr/local/docker
 ENV VER=17.4
 
