@@ -26,7 +26,7 @@ cmus:
 otp:
   extends:
     service: dev
-  image: kino/conts:fed-otp
+  image: kino/conts:deb-otp
 
 otpcopy:
   extends:
