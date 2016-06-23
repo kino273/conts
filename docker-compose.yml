@@ -25,6 +25,11 @@ cmus:
   
 otp:
   extends:
+    service: dev
+  image: kino/conts:fed-otp
+
+otpcopy:
+  extends:
     service: devcopy
   image: kino/conts:fed23-otp
 
