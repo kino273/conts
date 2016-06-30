@@ -1,4 +1,4 @@
-FROM kino/conts:fed
+FROM kino/conts:fed22
 
 RUN (dnf update; \
      dnf install -y python3-pillow-devel)
