@@ -1,7 +1,6 @@
-FROM kino/conts:fed
+FROM kino/conts:deb
 
-RUN (dnf update; \
-     dnf install -y python3-pillow-devel)
+RUN (apt-get install -y python3-pil)
 
 EXPOSE 22
 CMD ["/usr/local/startservice.sh"]
