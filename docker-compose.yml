@@ -43,3 +43,8 @@ ghc-ms:
   extends:
     service: ghc
   image: kino/conts:deb-ghc-ms
+
+py:
+  extends:
+    service: dev
+  image: kino/conts:deb-py
