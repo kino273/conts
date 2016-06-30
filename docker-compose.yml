@@ -43,3 +43,8 @@ ghc-ms:
   extends:
     service: ghc
   image: kino/conts:fed23-ghc-ms
+
+py:
+  extends:
+    service: dev
+  image: kino/conts:fed23-py
