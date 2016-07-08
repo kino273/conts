@@ -16,4 +16,4 @@ dnf install -y \
     ipa-gothic-fonts ipa-mincho-fonts ipa-pgothic-fonts ipa-pmincho-fonts ipa-ex-gothic-fonts ipa-ex-mincho-fonts \
     python-pip python3-pip
 
-cd /home/worker; su worker -c "wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -"
+cd /usr/local; su worker -c "wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -"
