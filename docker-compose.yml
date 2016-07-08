@@ -10,7 +10,6 @@ dev:
     - "127.0.0.1:4222:22"
   volumes:
     - /usr/local/docker:/usr/local/docker-host
-    - /home/worker/Dropbox:/home/worker/Dropbox
 
 devcopy:
   image: kino/conts:fed24
