@@ -14,4 +14,5 @@ apt-get install -y --fix-missing \
         python-pip python-dev python3-dev python3-pip
 
 
-cd /usr/local; su worker -c "wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -"
+(cd /usr/local; \
+ wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -)
