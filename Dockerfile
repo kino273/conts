@@ -1,4 +1,4 @@
-FROM debian
+FROM resin/rpi-raspbian:jessie
 
 # --- build local OS specific ---
 ADD ./build-local.sh /tmp/build-local.sh
