@@ -1,5 +1,5 @@
 dev:
-  image: kino/conts:deb
+  image: kino/rpi
   hostname: dev.localdomain
   privileged: true
   dns:
@@ -12,28 +12,14 @@ dev:
     - /usr/local/docker:/usr/local/docker-host
 
 devcopy:
-  image: kino/conts:deb
+  image: kino/rpi
   hostname: devcopy.localdomain
   volumes:
     - /usr/local/docker:/usr/local/docker-host
   command: /usr/local/copy.sh
 
-cmus:
+shairplay-sync:
   extends:
     service: devcopy
-  image: kino/conts:deb-cmus
+  image: kino/rpi:shairport-sync
   
-otp:
-  extends:
-    service: devcopy
-  image: kino/conts:deb-otp
-
-ghc:
-  extends:
-    service: dev
-  image: kino/conts:deb-ghc
-
-ghc-ms:
-  extends:
-    service: ghc
-  image: kino/conts:deb-ghc-ms
