@@ -7,12 +7,15 @@ script:
 - docker run --rm --privileged multiarch/qemu-user-static:register --reset
 # build image
 - docker build -t kino/rpi .
+- docker build -t kino/rpi:shairport-sync ./shairport-sync/
 # push image
 - >
   if [ "$TRAVIS_BRANCH" == "raspi" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
     docker login -u="$DOCKER_USER" -p="$DOCKER_PASS"
     TAG="jessie"
+    TAG="shairport-sync"
     docker tag kino/rpi kino/rpi:$TAG
     docker push kino/rpi
     docker push kino/rpi:$TAG
+    docker push kino/rpi:$TAG2
   fi
