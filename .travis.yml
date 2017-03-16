@@ -6,13 +6,10 @@ script:
 # prepare qemu
 - docker run --rm --privileged multiarch/qemu-user-static:register --reset
 # build image
-- docker build -t kino/rpi .
+- docker build -t kino/conts:raspi .
 # push image
 - >
   if [ "$TRAVIS_BRANCH" == "raspi" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
     docker login -u="$DOCKER_USER" -p="$DOCKER_PASS"
-    TAG="jessie"
-    docker tag kino/rpi kino/rpi:$TAG
-    docker push kino/rpi
-    docker push kino/rpi:$TAG
+    docker push kino/conts:raspi
   fi
