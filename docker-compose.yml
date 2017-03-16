@@ -7,7 +7,7 @@ dev:
   dns_search:
     - localdomain
   ports:
-    - "22"
+    - "127.0.0.1:4222:22"
   volumes:
     - /usr/local/docker:/usr/local/docker-host
 
@@ -22,4 +22,3 @@ shairplay-sync:
   extends:
     service: devcopy
   image: kino/rpi:shairport-sync
-  
