@@ -13,7 +13,7 @@ script:
   if [ "$TRAVIS_BRANCH" == "raspi" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
     docker login -u="$DOCKER_USER" -p="$DOCKER_PASS"
     TAG="jessie"
-    TAG="shairport-sync"
+    TAG2="shairport-sync"
     docker tag kino/rpi kino/rpi:$TAG
     docker push kino/rpi
     docker push kino/rpi:$TAG
