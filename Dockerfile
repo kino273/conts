@@ -1,4 +1,7 @@
-FROM debian
+FROM debian:8
+# 7: wheezy
+# 8: jessie
+# 9: stretch
 
 # --- build local OS specific ---
 ADD ./build-local.sh /tmp/build-local.sh
