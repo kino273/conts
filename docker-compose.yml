@@ -1,5 +1,5 @@
 dev:
-  image: kino/rpi
+  image: kino/conts:raspi
   hostname: dev.localdomain
   privileged: true
   dns:
@@ -14,13 +14,9 @@ dev:
     - ~/.ssh:/home/worker/.ssh
 
 devcopy:
-  image: kino/rpi
+  image: kino/conts:raspi
   hostname: devcopy.localdomain
   volumes:
     - /usr/local/docker:/usr/local/docker-host
   command: /usr/local/copy.sh
 
-shairplay-sync:
-  extends:
-    service: devcopy
-  image: kino/rpi:shairport-sync
