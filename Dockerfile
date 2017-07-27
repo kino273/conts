@@ -31,7 +31,8 @@ ADD gitconfig /home/worker/.gitconfig
 
 RUN (chmod 700 /home/worker/.ssh/; \
      chmod 600 /home/worker/.ssh/authorized_keys; \
-     chown -R worker:worker /home/worker)
+     chown -R worker:worker /home/worker; \
+     rm -f /var/run/nologin)
 
 # -------------------------------
 EXPOSE 22
