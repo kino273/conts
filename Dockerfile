@@ -1,4 +1,6 @@
 FROM resin/rpi-raspbian:jessie
+ENV WUID ${WUID:-"1000"}
+ENV WGID ${WGID:-"1000"}
 
 # --- build local OS specific ---
 ADD ./build-local.sh /tmp/build-local.sh
@@ -19,7 +21,9 @@ ADD copy.sh startservice.sh /usr/local/
 RUN (useradd -s /bin/bash worker; \
      echo 'worker:newpass' | chpasswd; \
      echo 'root:newpass' | chpasswd; \
-     mkdir -p /home/worker)
+     mkdir -p /home/worker; \
+     groupadd -f -g ${WGID} worker; \
+     usermod -u ${WUID} -g ${WGID} worker)
 ADD sudoers /etc/sudoers.d/
 
 # --- user files ----------------
@@ -31,7 +35,8 @@ ADD gitconfig /home/worker/.gitconfig
 
 RUN (chmod 700 /home/worker/.ssh/; \
      chmod 600 /home/worker/.ssh/authorized_keys; \
-     chown -R worker:worker /home/worker)
+     chown -R worker:worker /home/worker; \
+     rm -f /var/run/nologin)
 
 # -------------------------------
 EXPOSE 22
