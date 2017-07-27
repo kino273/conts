@@ -1,6 +1,6 @@
 FROM kino/conts:fed
 ENV VVV=/usr/local/docker
-ENV VER=17.4
+ENV VER=20.0
 
 ADD kerl /usr/bin/kerl
 RUN (mkdir -p $VVV; \
